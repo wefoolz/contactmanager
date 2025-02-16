@@ -1,6 +1,6 @@
 FROM maven:3.8.5-openjdk-17 as build
 WORKDIR /contactManager
-COPY . .
+COPY contactManager/ .
 RUN mvn clean package -DskipTests
 
 FROM openjdk:17.0.1-jdk-slim
